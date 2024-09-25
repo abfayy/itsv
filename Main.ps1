@@ -5,9 +5,9 @@
  .Tracked: <VSS source location>
 #>
 
-$sec = Get-Content C:\Scripts\secrets.txt (here the password was stored for the user account)
+$sec = Get-Content .\secrets.txt (here the password was stored for the user account)
 
-. C:\scripts\Functions.ps1
+. .\Functions.ps1
 
 function Get-ODRequest
 {
@@ -59,14 +59,14 @@ function Get-ODRequest
     #$error
     $context.executeQuery()
     if($error.Count -gt 0) { 
-            "$(Get-date) The SharePoint list was not connected" | out-file c:\scripts\error.log -append
-            $error | out-file c:\scripts\error.log -append 
+            "$(Get-date) The SharePoint list was not connected" | out-file .\error.log -append
+            $error | out-file .\error.log -append 
             Exit
     }
 
     If($listItems.count -eq 0){
-        "$(Get-date) This script made a read attempt" | out-file c:\scripts\error.log -append
-        "$(Get-date) Script exited; no items found" | out-file c:\scripts\error.log -append
+        "$(Get-date) This script made a read attempt" | out-file .\error.log -append
+        "$(Get-date) Script exited; no items found" | out-file .\error.log -append
         Exit
 
     } else {
@@ -77,27 +77,27 @@ function Get-ODRequest
         New-PSSession -Name "MEA" #for MEA tenant
 
         Invoke-Command -Session (Get-PSSession -Name "NAM") -ScriptBlock {
-            $sec = Get-Content C:\Scripts\secrets.txt
+            $sec = Get-Content .\secrets.txt
             $sec
-            . C:\scripts\Functions.ps1
+            . .\Functions.ps1
             CreateSPONAMSession
             $sps = Get-SPOSite -IncludePersonalSite $true -limit all  | Where-Object {$_.Url -like "*-my*"}
             $sps.count
         }
 
         Invoke-Command -Session (Get-PSSession -Name "CAN") -ScriptBlock {
-            $sec = Get-Content C:\Scripts\secrets.txt
+            $sec = Get-Content .\secrets.txt
             $sec
-            . C:\scripts\Functions.ps1
+            . .\Functions.ps1
             CreateSPOCANSession
             $sps = Get-SPOSite -IncludePersonalSite $true -limit all  | Where-Object {$_.Url -like "*-my*"}
             $sps.count
         }
 
         Invoke-Command -Session (Get-PSSession -Name "MEA") -ScriptBlock {
-            $sec = Get-Content C:\Scripts\secrets.txt
+            $sec = Get-Content .\secrets.txt
             $sec
-            . C:\scripts\Functions.ps1
+            . .\Functions.ps1
             CreateSPOMEASession
             $sps = Get-SPOSite -IncludePersonalSite $true -limit all  | Where-Object {$_.Url -like "*-my*"}
             $sps.count
@@ -135,7 +135,7 @@ function Get-ODRequest
                     } else 
                     {
                         Send-MailMessage -SmtpServer <##Input: SMPT server Url | don't forget to whitelist the server on SMTP relay server>" -From "Guru@spacesharepoint.com" -To $email2 -Subject "[OneDrive Data Check] Data not found for $($email)" -Body "Hi, `nNo content found in the OneDrive for $($email). `nTotal Size of folder $($spu.StorageUsageCurrent).`nAccess has been updated for URL: $($spu.url).`n - Automation Guru"
-                        "$(Get-date) [OneDrive Data Check] Data not found for $($email)" | out-file c:\scripts\error.log -append
+                        "$(Get-date) [OneDrive Data Check] Data not found for $($email)" | out-file .\error.log -append
                     }
                 }else{
                     Send-MailMessage -SmtpServer <##Input: SMPT server Url | don't forget to whitelist the server on SMTP relay server>" -From "Guru@spacesharepoint.com" -To $email2 -Subject "[OneDrive Data Check] Data not found for $($email)" -Body "Hi, `nNo site found for $($email)`n - Automation Guru"
@@ -167,15 +167,15 @@ function Get-ODRequest
                 }
             }
             if($error.Count -gt 0) { 
-                "$(Get-date) This script errored" | out-file c:\scripts\error.log -append
-                $error | out-file c:\scripts\error.log -append 
+                "$(Get-date) This script errored" | out-file .\error.log -append
+                $error | out-file .\error.log -append 
             }else{
                 #Updating Item in SharePoint
                 #003#<#this is working
                 $listItem["Status"] = "Completed"
                 $listItem.Update()
                 $context.ExecuteQuery()
-                "$(Get-date) This script $($listItem["Title"].ToString()) completed" | out-file c:\scripts\error.log -append
+                "$(Get-date) This script $($listItem["Title"].ToString()) completed" | out-file .\error.log -append
                 #>#003#
             }
         }
