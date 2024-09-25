@@ -1,14 +1,14 @@
 <#
  .Name: Functions.ps1
  .Author: Abdullah Fayyaz
- .Deployed to: \\AMCLD01SPWBQA01\C$\Scripts
+ .Deployed to: ---
  .Summary: This loads function for all MultiGeo SPO Sessions creation and more
  .Tracked: <Git Repository> 
 #>
 
 
 Write-Host "Loading functions....."
-$sec = Get-Content C:\Scripts\secrets.txt
+$sec = Get-Content .\secrets.txt
 #Connecting to NAM 
 function CreateSPONAMSession
 {
@@ -25,9 +25,9 @@ function CreateSPONAMSession
         Write-Host "Error in connection"
         Send-MailMessage -SmtpServer "<##Input: SMPT server Url | don't forget to whitelist the server on SMTP relay server>" -From "Guru@spacesharepoint.com" -Subject "Connection error with SPOnline NAM Service" -Body "Hi, `nThe Connect Script ran on PWEBQA01 failed.`n$($_.Exception.Message)`n$($_.Exception.ItemName)`nPlease check again.`n - Automation Guru"
         $ErrorMessage = $_.Exception.Message
-        $ErrorMessage | out-file c:\scripts\error.log -append
+        $ErrorMessage | out-file .\error.log -append
         $FailedItem = $_.Exception.ItemName
-        $FailedItem  | out-file c:\scripts\error.log -append
+        $FailedItem  | out-file .\error.log -append
     }finally{
 
         "$(Get-Date) This script SPONAMService made a read attempt" | out-file c:\scripts\error.log -append
@@ -53,9 +53,9 @@ function CreateSPOCANSession
         Write-Host "Error in connection"
         Send-MailMessage -SmtpServer "<##Input: SMPT server Url | don't forget to whitelist the server on SMTP relay server>" -From "Guru@spacesharepoint.com" -Subject "Connection error with CAN SPOnline Service" -Body "Hi, `nThe Connect Script ran on PWEBQA01 failed.`n$($_.Exception.Message)`n$($_.Exception.ItemName)`nPlease check again.`n - Automation Guru"
         $ErrorMessage = $_.Exception.Message
-        $ErrorMessage | out-file c:\scripts\error.log -append
+        $ErrorMessage | out-file .\error.log -append
         $FailedItem = $_.Exception.ItemName
-        $FailedItem  | out-file c:\scripts\error.log -append
+        $FailedItem  | out-file .\error.log -append
     }finally{
         "$(Get-Date) This script SPOCANService made a read attempt" | out-file c:\scripts\error.log -append
 
@@ -78,15 +78,15 @@ function CreateSPOMEASession
         Write-Host "Error in connection"
         Send-MailMessage -SmtpServer "<##Input: SMPT server Url | don't forget to whitelist the server on SMTP relay server>" -From "Guru@spacesharepoint.com" -Subject "Connection error with SPOnline MEA Service" -Body "Hi, `nThe Connect Script ran on PWEBQA01 failed.`n$($_.Exception.Message)`n$($_.Exception.ItemName)`nPlease check again.`n - Automation Guru"
         $ErrorMessage = $_.Exception.Message
-        $ErrorMessage | out-file c:\scripts\error.log -append
+        $ErrorMessage | out-file .\error.log -append
         $FailedItem = $_.Exception.ItemName
-        $FailedItem  | out-file c:\scripts\error.log -append
+        $FailedItem  | out-file .\error.log -append
     }finally{
-        "$(Get-Date) This script SPOMEAService made a read attempt" | out-file c:\scripts\error.log -append
+        "$(Get-Date) This script SPOMEAService made a read attempt" | out-file .\error.log -append
 
     }
 }
-        "$(Get-Date) This script Completely connected" | out-file c:\scripts\error.log -append
-        "Function was loaded successfully" | out-file c:\scripts\error.log -append
+        "$(Get-Date) This script Completely connected" | out-file .\error.log -append
+        "Function was loaded successfully" | out-file .\error.log -append
         
 Write-Host "Functions Loaded!!!"
