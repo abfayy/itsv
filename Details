@@ -1,0 +1,161 @@
+2026
+Projects: 
+Managed L2–L4 Microsoft 365 operations across client tenants under ITIL-aligned incident, problem, and change management, owning on-call escalations and root-cause analysis for recurring issues.
+Met agreed SLAs on ticket volume and resolution time while driving First Call Resolution and CSAT by minimizing rejected resolutions and reopened cases through accurate diagnosis and clear client communication.
+Maintained proactive, direct client communication with an onsite stakeholder presence, strengthening customer relationships and transparency across engagements.
+Authored knowledge base articles and runbooks, trained new analysts, coached the team, and participated in interviews and hiring drives to scale delivery capability.
+Contributed to client proposals and Service Improvement Plans (SIPs), identifying problem trends and recommending automation that reduced recurring ticket inflow.
+Development of MicroService for AI Chat
+Developed multiple Bots for Customer service
+Developed Lead Generation Automation for Social Media and Sites
+Multiple CRM Modules for Identity Management & Digital/Hardware Management 
+Microsoft Security: 
+	IAM - Entra, PIM, CAP
+	EDM - Intune, MAM, MDM, Zero Touch Provisioning, App & Patch Deployment, Endpoint privileage Management, Ent App Catolog, Remote Help, Microsoft Cloud PKI, Advanced Analytics, Copilot for Intune,  
+	XDR - Defender:  Endpoints, Office 365, Identity, Cloud Apps, SIEM
+	Purview - Data Governance, DLP, DSPM, Risk & Compliance, eDiscovery
+	Security Copilot
+
+2025 
+CRM for Call Centers for one system unifying multiple systems reducing 50% overhead
+Voice Agent for Lead Generation and Inbound Voice Assistant increasing 200% ROI
+Computer Vision for tracking Containiers
+Computer Vision for Inventory tracking
+Designed and POCed fraud detection system using AI models based on SBP directive 
+
+
+Q3 2024
+Pit Crew DRIVE Award Date: August 22, 2024
+	Abdullah Fayyaz was honored with a Pit Crew DRIVE award by Parsons Corporation for his exceptional leadership, rapid troubleshooting, and clear communication during the global CrowdStrike outage, which enabled swift operational recovery and earned praise from executive leadership including the CEO.
+Sentinel to track unauthorized devices on network for US GOV compliance
+MDM / MAM migration from Citrix to Microsoft Intune
+POC for Microsoft Copilot and Microsoft 365 Copilot
+
+
+Q3 2023
+Received the Parsons DRIVE Program "Standing Ovation" Award on 11/9/2023 for outstanding performance on the Pweb migration project to O365, which saved 225K annually in AWS hosting costs, and for developing a large-scale OneDrive backup solution for federal migration.
+
+
+
+Q1 2023:
+SharePoint 2013 to SharePoint 2019 (HSE/MEMT) 
+SharePoint 2013 to SharePoint 2019 (PwebHse)
+POC Windows 365 Cloud PC
+Production Cloud PC COM
+	AWS Migration to Cloud PC COM
+	Citrix VD Migration to Cloud PC COM
+Production Cloud PC FED (GCCHigh) 
+Automation - Cloud PC COM
+POC - Azure Virtual Desktop 
+POC - Virtualization Orchestration - Nerdio 
+ShareFile Migration for COM to OneDrive
+
+
+Q2 2023:
+.com Commercial to .us GCCHigh migration
+	Quest ODJ offline Domain Join
+Tanium implementation
+POC - Entitlement automation - In Progress
+POC - Dynamics for CRM for Servicing - In Progress
+Outsourced Migration - Intranet SharePoint 2013 to SharePointOnline - InProgress
+CardioLog Implementation for SharePoint 
+Production - AVD COM
+Production - Azure Virtualization Orchestration - Nerdio
+
+Q3 2023: 
+ChatGPT and DALL-E AzureAI Studio and Python Scripting - Completed
+POC - AVD US - InProgress
+POC - CloudPC MEA - InProgress
+PRODUCTION - Cloud PC US (CPC US) 
+	AWS Workspaces decommed and Migrated
+
+
+Q4 2023: 
+PWEB Migration (intranet) - Completed
+Deployment of Custom Webpages 
+AIP major blocker removed
+Parsons.us Migration ramping completed upto Wave 7 (12/15)
+CLM Matrix - SharePoint Server Support
+Automation - Licensing 
+DataGateway Servers in Parsons.us -InProgress
+POC - AVD US - Completed
+POC - CloudPC MEA - Completed
+Implemented Sentinel  for SIEM and SOAR
+
+
+2022
+Implemented SPLUNK for Audit logging - Improved bug detection and security 
+MDM for commercial users migration
+HSEprojects.parsons.com was migrated from Ping SSO to OKTa
+Archive.parsons.com farm was created for high latency data in SharePoint - C
+PGSprojects.parsons.com was migrated from SharePoint 2010 to SharePoint 2019
+Projects.parsons.com was migrated from SharePoint 2010 to SharePoint Online
+GCCH B2B was tested
+Contracts Workflow was migrated from SharePoint 2010 to SharePoint Online using Nintex
+GCCH testing was completed
+Data Migration for ShareFile Commercial
+Automation POC completed - SharePoint online site creation
+Security ScoreCard Increased Score - DNS / Service / Servers
+External user workflow GCC High (MK)
+Detectwise Bookings calendar (MK)
+SR-101 Team Document Approval (MK)
+PIM was enforced in M365 Commecial/GCC High (MK)
+eDiscovery Implementation (MK) 
+DLP for GCCHigh (MK)
+
+
+
+2020
+Managed AvePoint Compliance Guardian across multiple systems to ensure data classification using auto-labeling 
+Fixing access to PGS projects from fedremote on globalprotect JR - 4000+ users had to keep switching globalprotect,
+MEA Teams User Migration - 4000+ MEA users were provided Teams access
+MEA OneDrive Migration - 4000+ MEA users provided access/migrated to MEA O365 tenant
+MEA citrix AWS Migration - XenApp migrated | ADC , storefront. ShareFile remains in place
+MEA ShareFile decommission
+Android Enterprise - New compliance achievement, improves security posture for Company
+Apple DEP - WILL SAVE 100s devices from lockout
+*Legal Site Automation Process - 100+ sites created automagically for legal department
+DocAve Upgrade - Upgrade to the latest version with support from Vendor
+Team Automation - 100+ Teams created using automation
+AIP Upgrade 1 - New features are enabled for future deployment
+Issue with lockout on Carbon Black - Possible outage of 300+ servers which would not allow login
+External User WSP Upgrade for HSE FED - Saved 100+ hours / month
+MEA Training OneDrive - Trained 1000+ users in MEA, USA, CAN | Specialized training for Engineering Systems, EUC, Helpdesk
+Stream launch - Replacing Qumu as the internal video sharing platform | $60k+ savings
+Box.com for federal and commercial 
+OGS Integration (Box.com)
+OGS ShareFile Migration
+FIPS implementation on SP2019
+OGS SharePoint Migration
+Varonis POC
+Navex365 POC
+eDiscovery O365 POC
+Automation (OneDrive, SharePoint, Teams)
+Knowledge docs
+ShareFile documentation update
+Domain namespace tracking in SF (75%)
+VDIs / Frames POC
+MDM (upgrades, remote wipe, audit remediation, docs)
+Okta implementation
+Skype User Migration Phase 1
+ISSALL on-prem to FED PCP
+ISSGlobal on-prem to SharePoint Online
+OGS SharePoint Migration Phase 1
+Slack–Okta integration (FED tenant)
+Citrix to AWS
+GlobalProtect / fedremote access to PGS projects
+Legal Site Automation
+Team Automation
+
+
+
+2019
+1. Legal ODfB request automation from 10 day to 5 mins turnaround. (GP) 
+2. Automated feature activation for PIM team. Discovery > Scripting > Automation  using PMG. PIM had to recreate the site manually.
+3. Site storage management Automation. 20 Requests to 0. 
+4. User initiated PST migration. POC
+5. Workflow Manager servers leading to decommissioning of AgilePoint. 
+6. 8 over the weekend Upgrades lasting average 24 hrs. 
+7. Polaris Alpha migration. OGSystems migration. QRC migration 
+8. Azure Administration
+9. Solved chronic access issues with federal proposal team (SP) - AD related - blog: https://itsv-ace.blogspot.com/2022/02/sign-in-prompts-after-disa-stig-is.html
